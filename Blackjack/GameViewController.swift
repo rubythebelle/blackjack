@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 class GameViewController: UIViewController, UITextFieldDelegate {
 
@@ -36,6 +37,11 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     var houseTotal = 0;
     var playerTotal = 0;
     
+    var houseCount = 0;
+    var playerCount = 0;
+    
+    var turn = true;
+    
     var houseDeck: [String] = [];
     var playerDeck: [String] = [];
     
@@ -43,9 +49,11 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
 
     }
+    
+    @IBOutlet weak var testlbl: UILabel!
+    
     
     @IBAction func buttonPressed_start(_ sender: UIButton) {
 
@@ -53,19 +61,36 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         playerDeck = createDeck();
         
         imgHouseCard2.image = UIImage(named: "\(randomCard(deck: houseDeck)).png");
+        
         imgPlayerCard2.image = UIImage(named: "\(randomCard(deck: playerDeck)).png");
         imgPlayerCard1.image = UIImage(named: "\(randomCard(deck: playerDeck)).png");
+        
     }
     
     @IBAction func buttonPressed_hit(_ sender: UIButton) {
-        imgPlayerCard3.image = UIImage(named: "\(randomCard(deck: playerDeck)).png");
+        if turn == true && playerCount < 3 {
+            imgPlayerCard3.image = UIImage(named: "\(randomCard(deck: playerDeck)).png");
+            playerCount += 1;
+            turn = false;
+        } else if turn == false && playerCount < 3 {
+            imgPlayerCard4.image = UIImage(named: "\(randomCard(deck: playerDeck)).png");
+            playerCount += 1;
+            turn = true;
+        }
     }
     
     
     @IBAction func buttonPressed_stay(_ sender: UIButton) {
-        imgHouseCard3.image = UIImage(named: "\(randomCard(deck: houseDeck)).png");
+        if turn == true && houseCount < 3 {
+            imgHouseCard3.image = UIImage(named: "\(randomCard(deck: houseDeck)).png");
+            houseCount += 1;
+            turn = false;
+        } else if turn == false && houseCount < 3 {
+            imgHouseCard4.image = UIImage(named: "\(randomCard(deck: playerDeck)).png");
+            houseCount += 1;
+            turn = true;
+        }
     }
-    
     
     @IBAction func buttonPressed_name(_ sender: UIButton) {
         let alert = UIAlertController(title: "Add Name", message: "", preferredStyle: .alert)
@@ -125,10 +150,10 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         let randomNum = Int.random(in: 0...12);
         return deck[randomNum];
     }
-    
-    
-    
 
 
 }
+
+
+
 

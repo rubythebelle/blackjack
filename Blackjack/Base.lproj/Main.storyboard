@@ -148,7 +148,7 @@
                                     <constraint firstAttribute="width" constant="60" id="xbC-JU-cEs"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_back.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fat-h3-W45">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="houseCard2" image="card_back.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fat-h3-W45">
                                 <rect key="frame" x="147" y="176" width="60" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="1jG-rT-NRy"/>
@@ -218,6 +218,15 @@
                                     <constraint firstAttribute="width" constant="60" id="8NI-Ii-H3t"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mbr-qt-CpT">
+                                <rect key="frame" x="34" y="56" width="75" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="cqs-Ax-rHl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vjn-Oc-TJu"/>
                         <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -232,6 +241,7 @@
                             <constraint firstItem="vjn-Oc-TJu" firstAttribute="trailing" secondItem="Lqp-q9-a2g" secondAttribute="trailing" constant="20" id="9Bv-O5-Ya1"/>
                             <constraint firstItem="llX-gS-0og" firstAttribute="leading" secondItem="lJg-qu-YIY" secondAttribute="trailing" constant="1" id="9XF-T3-tjF"/>
                             <constraint firstItem="vjn-Oc-TJu" firstAttribute="trailing" secondItem="xGW-E3-3Si" secondAttribute="trailing" constant="20" id="9YA-06-G2e"/>
+                            <constraint firstItem="Mbr-qt-CpT" firstAttribute="leading" secondItem="vjn-Oc-TJu" secondAttribute="leading" constant="34" id="AI5-qx-be9"/>
                             <constraint firstItem="dsA-GF-523" firstAttribute="top" secondItem="QHD-uc-10h" secondAttribute="bottom" constant="19" id="B0u-X7-Epa"/>
                             <constraint firstItem="nqv-rA-4nH" firstAttribute="top" secondItem="xGW-E3-3Si" secondAttribute="bottom" constant="22" id="CvW-gI-0XK"/>
                             <constraint firstItem="xGW-E3-3Si" firstAttribute="leading" secondItem="vjn-Oc-TJu" secondAttribute="leading" constant="20" id="DRD-3X-hY0"/>
@@ -285,6 +295,7 @@
                             <constraint firstItem="dsA-GF-523" firstAttribute="leading" secondItem="x57-en-ZFM" secondAttribute="trailing" constant="1" id="vZa-HT-Pat"/>
                             <constraint firstItem="xI5-77-7Yz" firstAttribute="leading" secondItem="vjn-Oc-TJu" secondAttribute="leading" constant="20" id="w0K-OS-JfH"/>
                             <constraint firstItem="e0H-Wj-K1E" firstAttribute="top" secondItem="dsA-GF-523" secondAttribute="bottom" constant="28" id="wcM-gT-eQZ"/>
+                            <constraint firstItem="Mbr-qt-CpT" firstAttribute="top" secondItem="vjn-Oc-TJu" secondAttribute="top" constant="12" id="whr-1s-qdf"/>
                             <constraint firstItem="lJg-qu-YIY" firstAttribute="leading" secondItem="Fat-h3-W45" secondAttribute="trailing" constant="1" id="yXc-b3-x5t"/>
                         </constraints>
                     </view>
@@ -307,6 +318,7 @@
                         <outlet property="myCardTotal" destination="QHD-uc-10h" id="iGw-yd-9Gs"/>
                         <outlet property="myPoints" destination="Lqp-q9-a2g" id="UPH-hL-Qf3"/>
                         <outlet property="nameLabel_game" destination="e0H-Wj-K1E" id="BfR-X4-TtY"/>
+                        <outlet property="testlbl" destination="Mbr-qt-CpT" id="IUv-4C-7lk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YK9-74-LqA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
