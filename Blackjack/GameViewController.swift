@@ -12,15 +12,21 @@ class GameViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var imgHouseCard1: UIImageView!
     @IBOutlet weak var imgHouseCard2: UIImageView!
-    
     @IBOutlet weak var imgHouseCard3: UIImageView!
     @IBOutlet weak var imgHouseCard4: UIImageView!
+    @IBOutlet weak var imgHouseCard5: UIImageView!
+    @IBOutlet weak var imgHouseCard6: UIImageView!
+    @IBOutlet weak var imgHouseCard7: UIImageView!
+    @IBOutlet weak var imgHouseCard8: UIImageView!
     
     @IBOutlet weak var imgPlayerCard1: UIImageView!
     @IBOutlet weak var imgPlayerCard2: UIImageView!
-    
     @IBOutlet weak var imgPlayerCard3: UIImageView!
     @IBOutlet weak var imgPlayerCard4: UIImageView!
+    @IBOutlet weak var imgPlayerCard5: UIImageView!
+    @IBOutlet weak var imgPlayerCard6: UIImageView!
+    @IBOutlet weak var imgPlayerCard7: UIImageView!
+    @IBOutlet weak var imgPlayerCard8: UIImageView!
     
     @IBOutlet weak var myPoints: UILabel!
     @IBOutlet weak var houseCardTotal: UILabel!
@@ -33,6 +39,8 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nameLabel_game: UILabel!
     
+    var imgHouseCards: [UIImageView]!
+    
     var points = 0;
     var houseTotal = 0;
     var playerTotal = 0;
@@ -42,8 +50,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     
     var turn = true;
     
-    var houseDeck: [String] = [];
-    var playerDeck: [String] = [];
+    var deck: [String] = [];
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,37 +63,37 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func buttonPressed_start(_ sender: UIButton) {
-
-        houseDeck = createDeck();
-        playerDeck = createDeck();
+        deck = createDeck();
         
-        imgHouseCard2.image = UIImage(named: "\(randomCard(deck: houseDeck)).png");
+        imgHouseCard2.image =  getCardImage(cardID: randomCard());
         
-        imgPlayerCard2.image = UIImage(named: "\(randomCard(deck: playerDeck)).png");
-        imgPlayerCard1.image = UIImage(named: "\(randomCard(deck: playerDeck)).png");
+        imgPlayerCard2.image =  getCardImage(cardID: randomCard());
+        imgPlayerCard1.image =  getCardImage(cardID: randomCard());
         
     }
     
     @IBAction func buttonPressed_hit(_ sender: UIButton) {
         if turn == true && playerCount < 3 {
-            imgPlayerCard3.image = UIImage(named: "\(randomCard(deck: playerDeck)).png");
+            imgPlayerCard3.image = getCardImage(cardID: randomCard());
             playerCount += 1;
             turn = false;
         } else if turn == false && playerCount < 3 {
-            imgPlayerCard4.image = UIImage(named: "\(randomCard(deck: playerDeck)).png");
+            imgPlayerCard4.image = getCardImage(cardID: randomCard());
             playerCount += 1;
             turn = true;
         }
+        
+        myCardTotal.text = "777";
     }
     
     
     @IBAction func buttonPressed_stay(_ sender: UIButton) {
         if turn == true && houseCount < 3 {
-            imgHouseCard3.image = UIImage(named: "\(randomCard(deck: houseDeck)).png");
+            imgHouseCard3.image = getCardImage(cardID: randomCard());
             houseCount += 1;
             turn = false;
         } else if turn == false && houseCount < 3 {
-            imgHouseCard4.image = UIImage(named: "\(randomCard(deck: playerDeck)).png");
+            imgHouseCard4.image = getCardImage(cardID: randomCard());
             houseCount += 1;
             turn = true;
         }
@@ -146,9 +153,13 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    func randomCard(deck: [String]) -> String {
+    func randomCard() -> String {
         let randomNum = Int.random(in: 0...12);
         return deck[randomNum];
+    }
+    
+    func getCardImage(cardID: String) -> UIImage {
+        return UIImage(named: "\(cardID).png")!;
     }
 
 

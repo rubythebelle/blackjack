@@ -149,23 +149,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		31AA6B4D27FFE6E7004E7FAF = {
-			isa = PBXGroup;
-			children = (
-				31AA6B5827FFE6E7004E7FAF /* Blackjack */,
-				31AA6B5727FFE6E7004E7FAF /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		31AA6B5727FFE6E7004E7FAF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				31AA6B5627FFE6E7004E7FAF /* Blackjack.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		31AA6B5827FFE6E7004E7FAF /* Blackjack */ = {
+		319C21D02809A3360048F7B3 /* images */ = {
 			isa = PBXGroup;
 			children = (
 				31471C7E28084D440056DBC5 /* card_back.png */,
@@ -221,6 +205,30 @@
 				31471C7728084D430056DBC5 /* Spades11.png */,
 				31471C7128084D420056DBC5 /* Spades12.png */,
 				31471C9728084D480056DBC5 /* Spades13.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		31AA6B4D27FFE6E7004E7FAF = {
+			isa = PBXGroup;
+			children = (
+				31AA6B5827FFE6E7004E7FAF /* Blackjack */,
+				31AA6B5727FFE6E7004E7FAF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		31AA6B5727FFE6E7004E7FAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				31AA6B5627FFE6E7004E7FAF /* Blackjack.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		31AA6B5827FFE6E7004E7FAF /* Blackjack */ = {
+			isa = PBXGroup;
+			children = (
+				319C21D02809A3360048F7B3 /* images */,
 				31AA6B5927FFE6E7004E7FAF /* AppDelegate.swift */,
 				31AA6B5B27FFE6E7004E7FAF /* SceneDelegate.swift */,
 				31AA6B5D27FFE6E7004E7FAF /* ViewController.swift */,
