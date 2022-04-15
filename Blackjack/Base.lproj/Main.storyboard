@@ -25,10 +25,11 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Player1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0H-Wj-K1E">
-                                <rect key="frame" x="20" y="533" width="374" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0H-Wj-K1E">
+                                <rect key="frame" x="20" y="673" width="374" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.5" id="Sn5-0g-lqU"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20.5" id="Ycd-Cc-bGf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -320,6 +321,7 @@
                             <constraint firstItem="zpl-sd-k8Q" firstAttribute="leading" secondItem="vjn-Oc-TJu" secondAttribute="leading" constant="147" id="dS6-0Z-Vxs"/>
                             <constraint firstItem="vjn-Oc-TJu" firstAttribute="trailing" secondItem="nqv-rA-4nH" secondAttribute="trailing" constant="25" id="dmg-ov-okE"/>
                             <constraint firstItem="llX-gS-0og" firstAttribute="top" secondItem="xGW-E3-3Si" secondAttribute="bottom" constant="22" id="egF-Db-OBP"/>
+                            <constraint firstItem="vjn-Oc-TJu" firstAttribute="trailing" secondItem="e0H-Wj-K1E" secondAttribute="trailing" constant="20" id="fI2-aA-OIq"/>
                             <constraint firstItem="zTX-NE-ewD" firstAttribute="top" secondItem="vjn-Oc-TJu" secondAttribute="top" constant="41" id="hjp-fg-OCQ"/>
                             <constraint firstItem="vjn-Oc-TJu" firstAttribute="trailing" secondItem="VcX-xs-PIl" secondAttribute="trailing" constant="139" id="hw2-7z-Twx"/>
                             <constraint firstItem="vjn-Oc-TJu" firstAttribute="trailing" secondItem="xI5-77-7Yz" secondAttribute="trailing" constant="20" id="i5L-Cy-FRB"/>
@@ -336,6 +338,7 @@
                             <constraint firstItem="Lqp-q9-a2g" firstAttribute="top" secondItem="vjn-Oc-TJu" secondAttribute="top" constant="41" id="lmP-vU-pxS"/>
                             <constraint firstItem="x57-en-ZFM" firstAttribute="leading" secondItem="bzH-vd-cnx" secondAttribute="trailing" constant="1" id="mWA-sb-QMV"/>
                             <constraint firstItem="B1U-d8-v4B" firstAttribute="top" secondItem="vjn-Oc-TJu" secondAttribute="top" constant="345" id="odP-KW-w8A"/>
+                            <constraint firstItem="e0H-Wj-K1E" firstAttribute="leading" secondItem="vjn-Oc-TJu" secondAttribute="leading" constant="20" id="ow1-zr-0jd"/>
                             <constraint firstItem="vjn-Oc-TJu" firstAttribute="trailing" secondItem="RgV-vk-V0k" secondAttribute="trailing" constant="20" id="rhO-t7-etN"/>
                             <constraint firstItem="xGW-E3-3Si" firstAttribute="top" secondItem="vjn-Oc-TJu" secondAttribute="top" constant="75" id="rmt-65-oDR"/>
                             <constraint firstItem="dFN-eY-miQ" firstAttribute="leading" secondItem="RrC-16-9rU" secondAttribute="trailing" constant="1" id="s2I-Ey-lIv"/>
@@ -394,8 +397,37 @@
                     <view key="view" contentMode="scaleToFill" id="D7e-Do-gAb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ruby Kim" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xek-IA-o2Q">
+                                <rect key="frame" x="20" y="431" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="K5t-R5-otm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Credits for" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwg-jX-jAL">
+                                <rect key="frame" x="20" y="378" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="7VT-wT-Vse"/>
+                                    <constraint firstAttribute="width" constant="374" id="db2-aU-DVv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cgQ-gu-KZK"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cgQ-gu-KZK" firstAttribute="trailing" secondItem="qwg-jX-jAL" secondAttribute="trailing" constant="20" id="3ph-ha-qlh"/>
+                            <constraint firstItem="cgQ-gu-KZK" firstAttribute="trailing" secondItem="xek-IA-o2Q" secondAttribute="trailing" constant="20" id="9ek-aT-BcC"/>
+                            <constraint firstItem="xek-IA-o2Q" firstAttribute="top" secondItem="qwg-jX-jAL" secondAttribute="bottom" constant="19" id="9oT-9q-pYU"/>
+                            <constraint firstItem="qwg-jX-jAL" firstAttribute="top" secondItem="cgQ-gu-KZK" secondAttribute="top" constant="334" id="XTZ-CE-YFk"/>
+                            <constraint firstItem="xek-IA-o2Q" firstAttribute="leading" secondItem="cgQ-gu-KZK" secondAttribute="leading" constant="20" id="bZo-Ow-aYx"/>
+                            <constraint firstItem="qwg-jX-jAL" firstAttribute="leading" secondItem="cgQ-gu-KZK" secondAttribute="leading" constant="20" id="gaS-DR-lZA"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Credit" image="heart-7" id="mTm-N4-IJv"/>
                 </viewController>
@@ -537,9 +569,6 @@
         <image name="origami-7" width="15" height="15"/>
         <systemColor name="quaternarySystemFillColor">
             <color red="0.45490196078431372" green="0.45490196078431372" blue="0.50196078431372548" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
